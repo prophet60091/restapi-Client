@@ -1,0 +1,29 @@
+<p>Add some Beers, eh!.</p>
+<a class="btn btn-primary" href="/#/create/beer"><span class="glyphicon glyphicon-plus"></span> Create Beer</a>
+<br/>
+<table class="table table-striped">
+  <thead>
+    <th>Beer Name</th>
+    <th>Brewery</th>
+    <th>Style</th>
+    <th>Alcohol Content</th>
+    <th>Origin</th>
+    <th>Located at</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="beer in beers">
+      <td>{{beer.name}}</td>
+      <td>{{beer.brewery}}</td>
+      <td>{{beer.style}}</td>
+      <td>{{beer.alcohol_content}}</td>
+      <td>{{beer.origin}}</td>
+      <td>{{beer.location}}</td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/beer/{{ beer._id }}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+          <a ng-href="/#/beer/{{ beer._id }}/delete" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span></a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
