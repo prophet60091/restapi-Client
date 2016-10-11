@@ -11,12 +11,13 @@
 angular
   .module('newClientApp', [
     'ngRoute',
-    'restangular',
-    'ngResource'
+    'restangular'
   ])
   .config(function ($routeProvider, RestangularProvider) {
 
-    RestangularProvider.setBaseUrl('http://localhost:8080');
+    RestangularProvider.setBaseUrl('http://localhost:8080/');
+    // RestangularProvider.setJsonp(true);
+    // RestangularProvider.setDefaultRequestParams('jsonp', {callback: 'JSON_CALLBACK'});
     // RestangularProvider.addResponseInterceptor(function(data, operation, what, url, response, deferred) {
     //   console.log("````````````````");
     //   console.log(data);
