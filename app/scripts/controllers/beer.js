@@ -8,7 +8,7 @@
  * Controller of the newClientApp
  */
 angular.module('newClientApp')
-  .controller('BeerCtrl', function ($scope, Beer, Restangular, $http, $sce) {
+  .controller('BeerCtrl', function ($scope, Beer) {
     // $scope.beers = [{
     //   "name": "Modus Hoparandi",
     //   "brewery": "Ska",
@@ -45,4 +45,8 @@ angular.module('newClientApp')
     // });
     $scope.beers = Beer.getList().$object;
       console.log($scope.beers);
+
+    if($scope.beers === ''){
+       $scope.notice  = 'The bartender appears to be down. Try tipping next time'
+    }
   });

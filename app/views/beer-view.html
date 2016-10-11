@@ -1,8 +1,28 @@
-<p>This is the beer-view view.</p>
+<p ng-show="show">This is the beer-view view.</p>
 <ng-include src="'views/beer-nav.html'"></ng-include>
-{{beers.name}}
-{{beers.brewery}}
-{{beers.style}}
-{{beers.alcohol_content}}
-{{beers.origin}}
-{{beers.location}}
+
+<table class="table table-condensed">
+  <tbody>
+  <tr>
+    <td>Beer Name</td><td><a ng-href="/#/beer/{{ beers._id }}"> {{beers.name}}</a></td>
+  </tr>
+  <tr>
+    <td>Brewery</td><td>{{beers.brewery}}</td>
+  </tr>
+  <tr>
+    <td>Style</td><td>{{beers.style}}</td>
+  </tr>
+  <tr>
+    <td>Alcohol Content</td><td>{{beers.alcohol_content}}</td>
+  </tr>
+  <tr>
+    <td>Origin</td><td>{{beers.origin}}</td>
+  </tr>
+  <tr>
+    <td>Located at</td><td>{{beers.location}}</td>
+  </tr>
+  <tr>
+    </tr>
+  </tbody>
+</table>
+

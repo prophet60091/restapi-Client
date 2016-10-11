@@ -15,8 +15,11 @@ angular.module('newClientApp')
   ) {
     $scope.beers = {};
 
+
+
     $scope.saveBeer = function() {
-      Beer.post($scope.beers).then(function() {
+
+      Beer.post($scope.beers).then(function(response) {
          $location.path('/beer');
       });
     };

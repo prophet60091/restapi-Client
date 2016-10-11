@@ -1,4 +1,10 @@
-<ul class="nav nav-tabs">
+<div class="nav" ng-show="show">
+  <a class="btn btn-primary" href="/#/create/beer"><span class="glyphicon glyphicon-plus"></span> Create Beer</a>
+  <a class="btn btn-default" href="/#/beer"><span class="glyphicon"></span>View all</a>
+</div>
+<br/>
+<ul class="nav nav-tabs" ng-show="show">
   <li role="presentation" ng-class="{active: viewBeer}"><a ng-href="/#/beer/{{ beers._id }}">View</a></li>
   <li role="presentation" ng-class="{active: editBeer}"><a ng-href="/#/beer/{{ beers._id }}/edit">Edit</a></li>
 </ul>
+<br/>

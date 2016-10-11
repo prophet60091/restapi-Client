@@ -14,6 +14,7 @@ angular.module('newClientApp')
     Beer
   ) {
     $scope.viewBeer = true;
+    $scope.show = true;
     //$scope.beers = Beer.one($routeParams.id).get().$object;
 
     Beer.one($routeParams.id).get().then(function(data) {

@@ -9,21 +9,26 @@
     <th>Alcohol Content</th>
     <th>Origin</th>
     <th>Located at</th>
+    <th>Loved?</th>
   </thead>
   <tbody>
     <tr ng-repeat="beer in beers">
-      <td>{{beer.name}}</td>
+      <td><a ng-href="/#/beer/{{ beer._id }}"> {{beer.name}}</a></td>
       <td>{{beer.brewery}}</td>
       <td>{{beer.style}}</td>
       <td>{{beer.alcohol_content}}</td>
       <td>{{beer.origin}}</td>
       <td>{{beer.location}}</td>
+      <td ng-if="beer.loved == true"><img src="../images/love-my-beer1.png" ></td>
+      <td ng-if="beer.loved == false"><img src="../images/No_Alcohol.gif"  ></td>
+      <td ng-if='!beer.loved'>n/a</td>
       <td>
         <div class="button-group">
-          <a ng-href="/#/beer/{{ beers._id }}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
-          <a ng-href="/#/beer/{{ beers._id }}/delete" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span></a>
+          <a ng-href="/#/beer/{{ beer._id }}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit glyphicon-align-left"></span></a>
+          <a ng-href="/#/beer/{{ beer._id }}/delete" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle glyphicon-align-right"></span></a>
         </div>
       </td>
     </tr>
   </tbody>
 </table>
+<div>{{notice}}</div>
