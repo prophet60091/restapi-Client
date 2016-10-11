@@ -13,10 +13,10 @@ angular.module('newClientApp')
     Beer,
     $location
   ) {
-    // $scope.beer = {};
-    $scope.saveBeer = function() {
+    $scope.beers = {};
 
-      Beer.post($scope.beer).then(function() {
+    $scope.saveBeer = function() {
+      Beer.post($scope.beers).then(function() {
          $location.path('/beer');
       });
     };

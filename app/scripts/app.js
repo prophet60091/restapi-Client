@@ -11,7 +11,8 @@
 angular
   .module('newClientApp', [
     'ngRoute',
-    'restangular'
+    'restangular',
+    'ngResource'
   ])
   .config(function ($routeProvider, RestangularProvider) {
 
@@ -86,5 +87,5 @@ angular
     });
   })
   .factory('Beer', function(BeerRestangular){
-    return BeerRestangular.all('beer') // The actual api resource from whence it pulls
+    return BeerRestangular.service('beer') // The actual api resource from whence it pulls
   });
