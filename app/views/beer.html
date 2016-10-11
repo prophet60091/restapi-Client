@@ -21,7 +21,7 @@
       <td>{{beer.location}}</td>
       <td ng-if="beer.loved == true"><img src="../images/love-my-beer1.png" ></td>
       <td ng-if="beer.loved == false"><img src="../images/No_Alcohol.gif"  ></td>
-      <td ng-if='!beer.loved'>n/a</td>
+      <td ng-if='beer.loved == undefined' >n/a</td>
       <td>
         <div class="button-group">
           <a ng-href="/#/beer/{{ beer._id }}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit glyphicon-align-left"></span></a>

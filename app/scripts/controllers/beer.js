@@ -39,14 +39,29 @@ angular.module('newClientApp')
     //   console.log("resp:" + Restangular.service('beer').getList().$object);
     //   });
 
-    // Beer.getList().then(function(data) {
-    //   $scope.beers = data;
-    //   console.log("resp:" + $scope.beers);
-    // });
-    $scope.beers = Beer.getList().$object;
-      console.log($scope.beers);
+    // Beer.setErrorInterceptor(
+    //   function(response, deferred, responseHandler) {
+    //     var generalHandlerTimer = $timeout(function(){
+    //       generalErrorHanding(response);
+    //     },1);
+    //     response.cancelGeneralHandler = function(){
+    //       $timeout.cancel(generalHandlerTimer);
+    //     };
+    //     return true; // continue the promise chain
+    //   }
+    // );
 
-    if($scope.beers === ''){
-       $scope.notice  = 'The bartender appears to be down. Try tipping next time'
-    }
+
+    Beer.getList().then(function(data) {
+      $scope.beers = data;
+
+    },function(response){
+      console.log("resp:" + response);
+    });
+    // $scope.beers = Beer.getList().$object;
+    //   console.log($scope.beers);
+    //
+    // if($scope.beers === ''){
+    //    $scope.notice  = 'The bartender appears to be down. Try tipping next time'
+    // }
   });

@@ -38,6 +38,19 @@ angular
     //   }
     //   return extractedData;
     // });
+    //do some error handling///
+    // RestangularProvider.setErrorInterceptor(
+    //   function(response, deferred, responseHandler) {
+    //     var generalHandlerTimer = $timeout(function(){
+    //       generalErrorHanding(response);
+    //     },1);
+    //     response.cancelGeneralHandler = function(){
+    //       $timeout.cancel(generalHandlerTimer);
+    //       console.log(response);
+    //     };
+    //     return true; // continue the promise chain
+    //   }
+    // );
 
     $routeProvider
 
