@@ -1,4 +1,4 @@
-<a class="btn btn-default" onclick=history.back();><span class="glyphicon"></span>Back</a><div ng-if="failed" class="alert-warning" >Missing Information! {{failMessage}}</div>
+<a class="btn btn-default" onclick=history.back();><span class="glyphicon"></span>Back</a><div ng-if="failed" class="alert-warning" >Bad Information! {{failMessage}} or is too long</div>
 <br/>
 
 <form role="form">
@@ -38,4 +38,5 @@
   </div>
 
   <input type="submit" class="btn btn-primary" ng-click="saveBeer()" value="Save"/>
+  <input type="button" class="btn" ng-click="reset()" value="Reset" />
 </form>

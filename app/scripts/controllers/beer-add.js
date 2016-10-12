@@ -13,10 +13,9 @@ angular.module('newClientApp')
     Beer,
     $location
   ) {
-    $scope.beers = {};
 
+    // Save a beer
     $scope.saveBeer = function() {
-
       Beer.post($scope.beers).then(function(response) {
          $location.path('/beer');
       },function(response){
@@ -29,4 +28,15 @@ angular.module('newClientApp')
         }
       });
     };
+
+    //reset the form
+    $scope.blank = {};
+    //reset the form
+    $scope.reset = function($scope) {
+      $scope.beers.name = "";
+    };
+
+
+
+
   });
