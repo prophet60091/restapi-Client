@@ -36,7 +36,9 @@
       no<input type="radio" ng-model="beers.loved" class="radio" id="nolove" ng-value="false"/>
     </label>
   </div>
-
-  <input type="submit" class="btn btn-primary" ng-click="saveBeer()" value="Save"/>
+  <label for="agree" class="control-label">Do you agree to add this beer? (check and you may save it)
+    <input type="checkbox" ng-model="user.agree" name="userAgree" id="agree" required="" />
+  </label>
+  <input ng-show="user.agree" type="submit" class="btn btn-primary" ng-click="saveBeer()" value="Save"/>
   <input type="button" class="btn" ng-click="reset()" value="Reset" />
 </form>

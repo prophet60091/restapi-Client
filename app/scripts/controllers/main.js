@@ -8,10 +8,13 @@
  * Controller of the clientApp
  */
 angular.module('newClientApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function ($scope, $location) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+    $scope.go = function(){
+      $location.path('/beer')
+    }
   });
