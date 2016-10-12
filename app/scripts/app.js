@@ -15,7 +15,7 @@ angular
   ])
   .config(function ($routeProvider, RestangularProvider) {
 
-    RestangularProvider.setBaseUrl('http://127.0.0.1:9000/');
+    RestangularProvider.setBaseUrl('http://localhost:9000/');
     // RestangularProvider.setJsonp(true);
     // RestangularProvider.setDefaultRequestParams('jsonp', {callback: 'JSON_CALLBACK'});
     // RestangularProvider.addResponseInterceptor(function(data, operation, what, url, response, deferred) {
