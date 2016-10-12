@@ -15,7 +15,7 @@ angular
   ])
   .config(function ($routeProvider, RestangularProvider) {
 
-    RestangularProvider.setBaseUrl('http://54.218.249.67:9000/');
+    RestangularProvider.setBaseUrl('http://0.0.0.0:9000/');
     // RestangularProvider.setJsonp(true);
     // RestangularProvider.setDefaultRequestParams('jsonp', {callback: 'JSON_CALLBACK'});
     // RestangularProvider.addResponseInterceptor(function(data, operation, what, url, response, deferred) {
